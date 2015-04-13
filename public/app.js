@@ -54,6 +54,7 @@ var guess = function() {
 	$('body').css('background', '#00CC00');
 	main();
     }
+    return;
 };
 
 var playAgain = function() {
