@@ -69,9 +69,9 @@ var main= function(){
     $('#hint').click(hint);
     $('#guess').click(guess);
     $('#playAgain').click(playAgain);
-    $('#guess').keyup(function(e){
+    $('#guessBox').keyup(function(e){
 	if(e==13){
-	    return guess;
+	    guess();
 	}
     });
 }
