@@ -1,4 +1,4 @@
-var express = require('express');
+Bvar express = require('express');
 var app = express();
 
 //express middlewares
@@ -7,7 +7,7 @@ var compression = require('compression');
 //express setup
 app.use(compression());
 app.set('port', process.env.PORT || 8060);
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/"));
 
 //launch
 app.listen(app.get('port'), function() {
