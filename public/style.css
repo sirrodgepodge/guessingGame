@@ -1,11 +1,8 @@
 .page-header {
 	     font-size:250%;
 	     font-family: 'Brush Script MT', cursive;
-	     background:#000000;
+	     background: #FFFFFF; 
 	     z-index:2;
-	     position: absolute;
-	     margin-top: 0;
-	     padding-top: 0;
 }
 
 .main {
