@@ -4,7 +4,7 @@ var origPlaceholder = $('#guessBox').attr('placeholder');
 
 var fortyTwo = function(){
     $('#guessBox').attr("placeholder","42");
-    $('#guessBox').val('');
+    $('#guessBox').val("");
 };
 
 var hint = function(){
@@ -13,8 +13,8 @@ var hint = function(){
 };
 
 var guessRem = 5;
-var guess =  function() {
-    var theirGuess = $('#guessBox').val();
+var guess = function() {
+    var theirGuess = parseInt($('#guessBox').val());
     $('#guessBox').val("");
     
     //Check guess type
