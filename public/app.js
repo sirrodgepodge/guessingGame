@@ -1,4 +1,4 @@
-var answer = Math.ceil(Math.random()*100);
+Bvar answer = Math.ceil(Math.random()*100);
 var origBackground = $('body').css('background');
 var origPlaceholder = $('#guessBox').attr('placeholder');
 
@@ -59,7 +59,7 @@ var guess = function() {
 var playAgain = function() {
     answer = Math.ceil(Math.random()*100);
     guessRem = 5;
-    $('li.guesslist').remove();
+    $('.guessFBack li').remove();
     $('h4.guessFBack').text("");
     $('#guessBox').attr('placeholder', origPlaceholder);
     $('body').css('background', origBackground);
