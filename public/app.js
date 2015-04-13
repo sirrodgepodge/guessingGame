@@ -1,5 +1,6 @@
 var answer = Math.ceil(Math.random()*100);
 var origBackground = $('body').css('background');
+var origPlaceholder = $('#guessBox').attr('placeholder');
 
 var fortyTwo = function(){
     $('#guessBox').attr("placeholder","42");
@@ -51,8 +52,9 @@ var playAgain = function() {
     answer = Math.ceil(Math.random()*100);
     guessRem = 5;
     $('#guessFBack').text("");
+    $('#guessBox').attr('placeholder', origPlaceholder);
     $('body').css('background', origBackground);
-    $('#playAgain').attr('id','guess');
+    $('#playAgain').text("Guess!").attr('id','guess');
 };
 
 var main= function(){
