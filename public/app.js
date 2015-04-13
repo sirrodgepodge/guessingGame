@@ -8,13 +8,13 @@ var fortyTwo = function(){
 
 var hint = function(){
     $('#guessBox').attr("placeholder", answer);
-    $('#guessBox').val('');
+    $('#guessBox').val("");
 };
 
 var guessRem = 5;
 var guess =  function() {
     var theirGuess = $('#guessBox').val();
-    $('#guessBox').val() = "";
+    $('#guessBox').val("");
     
     //Check guess type
     if(theirGuess.length === 0 || typeof theirGuess !== 'number') {
