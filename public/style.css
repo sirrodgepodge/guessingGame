@@ -1,4 +1,4 @@
-.page-header {
+B.page-header {
 	     font-size:250%;
 	     font-family: 'Brush Script MT', cursive;
 	     background: #FFFFFF; 
@@ -6,6 +6,7 @@
 	     margin: 0 0 0 0;
 	     border-bottom-width: 5px;
 	     padding-top: 9px;
+	     padding-bottom: 5px;
 }
 
 body {
