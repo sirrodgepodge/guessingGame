@@ -35,11 +35,11 @@ var guess = function() {
 
     //Provide guess feedback
     if (theirGuess < answer) {
-	$('<li class="below">'+theirGuess+'</li>').appendTo("ul .guessFBack");
-	$('h4 .guessFBack').css('color', 'blue').text("Too Low!");
+	$('<li class="below">'+theirGuess+'</li>').appendTo("ul.guessFBack");
+	$('h4.guessFBack').css('color', 'blue').text("Too Low!");
     } else if (theirGuess > answer) {
-	$('<li class="above">'+theirGuess+'</li>').appendTo("ul .guessFBack");
-	$('h4 .guessFBack').css('color', 'red').text("Too High!");
+	$('<li class="above">'+theirGuess+'</li>').appendTo("ul.guessFBack");
+	$('h4.guessFBack').css('color', 'red').text("Too High!");
     } else {
 	//for right answer
 	$('#guess').text("Play Again!");
@@ -51,8 +51,8 @@ var guess = function() {
 var playAgain = function() {
     answer = Math.ceil(Math.random()*100);
     guessRem = 5;
-    $('li .guesslist').remove();
-    $('h4 .guessFBack').text("");
+    $('li.guesslist').remove();
+    $('h4.guessFBack').text("");
     $('#guessBox').attr('placeholder', origPlaceholder);
     $('body').css('background', origBackground);
     $('#playAgain').text("Guess!").attr('id','guess');
