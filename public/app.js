@@ -69,6 +69,11 @@ var main= function(){
     $('#hint').click(hint);
     $('#guess').click(guess);
     $('#playAgain').click(playAgain);
+    $('#guess').keyup(function(e){
+	if(e==13){
+	    guess();
+	}
+    });
 }
 
 $(document).ready(main);
