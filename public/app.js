@@ -3,10 +3,12 @@ var origBackground = $('body').css('background');
 
 var fortyTwo = function(){
     $('#guessBox').attr("placeholder","42");
+    $('#guessBox').val('');
 };
 
 var hint = function(){
     $('#guessBox').attr("placeholder", answer);
+    $('#guessBox').val('');
 };
 
 var guessRem = 5;
