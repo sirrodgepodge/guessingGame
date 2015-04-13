@@ -71,7 +71,7 @@ var main= function(){
     $('#playAgain').click(playAgain);
     $('#guessBox').keyup(function(e){
 	if(e==13){
-	    guess();
+	    $('#guess').click();
 	}
     });
 }
