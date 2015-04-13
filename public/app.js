@@ -18,7 +18,7 @@ var guess = function() {
     $('#guessBox').val("");
     
     //Check guess type
-    if(theirGuess.toString().length === 0 || typeof theirGuess !== 'number' || theirGuess > 100 || theirGuess < 1) {
+    if(theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
 	return;
     }
