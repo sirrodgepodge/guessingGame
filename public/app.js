@@ -64,6 +64,7 @@ var playAgain = function() {
     $('#guessBox').attr('placeholder', origPlaceholder);
     $('body').css('background', origBackground);
     $('#playAgain').text("Guess!").attr('id','guess');
+    main();
 };
 
 var main= function(){
