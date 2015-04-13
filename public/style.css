@@ -10,7 +10,7 @@
 }
 
 body {
-    background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0 /cover;
+    background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0 100% 100%;
 }
 
 .main {
