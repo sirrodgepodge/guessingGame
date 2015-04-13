@@ -10,6 +10,10 @@ body {
     background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0 /cover;
 }
 
+.main {
+    padding-top:10px;
+}
+
 .row {
-     padding-bottom: 3px;
+     padding-bottom:3px;
 }
