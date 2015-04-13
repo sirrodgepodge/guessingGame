@@ -18,7 +18,7 @@ var guess = function() {
     $('#guessBox').val("");
     
     //Check guess type
-    if(theirGuess.length === 0 || typeof theirGuess !== 'number') {
+    if(theirGuess.toString().length === 0 || typeof theirGuess !== 'number') {
 	$('#guessBox').attr("placeholder", "Number Please!");
 	return;
     }
