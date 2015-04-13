@@ -10,9 +10,14 @@
 }
 
 .guessFBack {
+    padding-top: 20px;
     border: 1px #000000;
     background: #FFFFFF;
     border-radius: 3px;
+}
+
+ul.guessFBack {
+    list-style-type: none;
 }
 
 body {
@@ -25,10 +30,6 @@ body {
 
 .row {
     padding-bottom:3px;
-}
-
-.guessList {
-    padding-top: 20px;
 }
 
 .above {
