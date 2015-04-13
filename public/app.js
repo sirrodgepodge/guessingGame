@@ -2,21 +2,21 @@ var answer = Math.ceil(Math.random()*100);
 var origBackground = $('body').css('background');
 
 var fortyTwo = function(){
-    $('#guessbox').attr("placeholder","42");
+    $('#guessBox').attr("placeholder","42");
 };
 
 var hint = function(){
-    $('#guessbox').attr("placeholder", answer);
+    $('#guessBox').attr("placeholder", answer);
 };
 
 var guessRem = 5;
 var guess =  function() {
-    var theirGuess = $('#guess').val();
-    $('#guess').val() = "";
+    var theirGuess = $('#guessBox').val();
+    $('#guessBox').val() = "";
     
     //Check guess type
     if(theirGuess.length === 0 || typeof theirGuess !== 'number') {
-	$('#guessbox').attr("placeholder", "Number Please!");
+	$('#guessBox').attr("placeholder", "Number Please!");
 	return;
     }
     
@@ -28,7 +28,7 @@ var guess =  function() {
 
     //Increment guess number
     guessRem -= 1;
-    $('#guessbox').attr("placeholder", guessRem + " guesses left!");
+    $('#guessBox').attr("placeholder", guessRem + " guesses left!");
 
     //Provide guess feedback
     if (theirGuess < answer) {
@@ -38,9 +38,10 @@ var guess =  function() {
 	$('<li class="above">'+theirGuess+'</li>').appendTo(".guessList");
 	$('#guessFBack').css('color', 'red').text("Too High!");
     } else {
-	console.log("You got it!!!!!");	
+	//for right answer
 	$('#guess').text("Play Again!");
 	$('#guess').attr('id', 'playAgain');
+	$('body').css('background', '#00CC00')
     }
 };
 
