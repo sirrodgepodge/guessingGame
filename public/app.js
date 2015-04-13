@@ -26,6 +26,7 @@ var guess = function() {
     //Create guess list if first, end game if guess number 5 and wrong
     if (theirGuess !== answer && guessRem === 1) {
 	$('#guessBox').attr("placeholder", "Work on that guess!");
+	$(".guessFBack").text("You've lost :(");
 	$('#guess').text("Play Again!");
 	$('body').attr('background', '#FF0000');
 	$('#guess').attr('id','playAgain');
