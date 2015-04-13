@@ -1,4 +1,4 @@
-Bvar answer = Math.ceil(Math.random()*100);
+var answer = Math.ceil(Math.random()*100);
 var origBackground = $('body').css('background');
 var origPlaceholder = $('#guessBox').attr('placeholder');
 
