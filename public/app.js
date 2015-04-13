@@ -30,6 +30,7 @@ var guess = function() {
 	$('#guess').text("Play Again!");
 	$('body').attr('background', '#FF0000');
 	$('#guess').attr('id','playAgain');
+	main();
 	return;
     }
 
@@ -50,7 +51,8 @@ var guess = function() {
 	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
 	$('#guess').text("Play Again!");
 	$('#guess').attr('id', 'playAgain');
-	$('body').css('background', '#00CC00')
+	$('body').css('background', '#00CC00');
+	main();
     }
 };
 
