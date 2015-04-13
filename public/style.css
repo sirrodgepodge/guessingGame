@@ -2,6 +2,7 @@
 	     font-size:250%;
 	     font-family: 'Brush Script MT', cursive;
 	     background:#000000;
+	     z-index:2;
 }
 
 body {
