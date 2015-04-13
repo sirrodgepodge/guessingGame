@@ -45,6 +45,8 @@ var guess = function() {
 	$('h4.guessFBack').css('color', 'red').text("Too High!");
     } else {
 	//for right answer
+	$('#guessBox').attr('placeholder', 'killer guessing!');
+	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
 	$('#guess').text("Play Again!");
 	$('#guess').attr('id', 'playAgain');
 	$('body').css('background', '#00CC00')
