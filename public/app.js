@@ -70,7 +70,7 @@ var main= function(){
     $('#guess').click(guess);
     $('#playAgain').click(playAgain);
     $('#guessBox').keyup(function(e){
-	if(e.keycode==13){
+	if(e.which==13){
 	    $('#guess').click();
 	}
     });
