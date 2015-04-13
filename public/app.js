@@ -18,8 +18,8 @@ var guess = function() {
     $('#guessBox').val("");
     
     //Check guess type
-    if(theirGuess.toString().length === 0 || typeof theirGuess !== 'number') {
-	$('#guessBox').attr("placeholder", "Number Please!");
+    if(theirGuess.toString().length === 0 || typeof theirGuess !== 'number' || theirGuess > 100 || theirGuess < 1) {
+	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
 	return;
     }
     
