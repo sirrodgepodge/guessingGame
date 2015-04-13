@@ -1,4 +1,4 @@
-BB.page-header {
+BBBB.page-header {
 	     font-size:250%;
 	     font-family: 'Brush Script MT', cursive;
 	     background: #FFFFFF; 
@@ -10,7 +10,7 @@ BB.page-header {
 }
 
 body {
-    background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0 cover;
+    background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0;
 }
 
 .main {
