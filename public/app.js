@@ -20,7 +20,7 @@ var guess = function() {
     //Check guess type
     if(theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
-	break guess;
+	break this;
     }
     
     //Create guess list if first, end game if guess number 5 and wrong
@@ -31,7 +31,7 @@ var guess = function() {
 	$('body').attr('background', '#FF0000');
 	$('#guess').attr('id','playAgain');
 	main();
-	break guess;
+	break this;
     }
 
     //Increment guess number
