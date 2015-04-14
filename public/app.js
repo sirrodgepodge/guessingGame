@@ -57,7 +57,7 @@ var guess = function() {
 	$('#guess').text("Play Again!");
 	$('body').css('background', 'green');
     }
-}};
+};
 
 var playAgain = function() {
     answer = Math.ceil(Math.random()*100);
