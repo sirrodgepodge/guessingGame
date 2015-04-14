@@ -38,7 +38,7 @@ var guess = function() {
 	$('#guessBox').attr("placeholder", "Work on that guess!");
 	$("h4.guessFBack").text("You've lost :(").css('color','red');
 	$('#guess').text("Play Again!");
-	$('body').attr('background', 'red');
+	$('body').css('background', 'red');
 	$('#guess').attr('id','playAgain');
 	return;
     }
@@ -55,7 +55,7 @@ var guess = function() {
 	$('#guessBox').attr('placeholder', 'killer guessing!');
 	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
 	$('#guess').text("Play Again!");
-	$('body').css('background', 'green');
+	$('body').css('background', '#00CC00');
 	guessRem = 0;
     }
 };
