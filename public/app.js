@@ -65,10 +65,10 @@ var guess = function() {
 
     if(theirGuess < answer) {
 	$('<li class="'+temp+'">'+theirGuess+'&#8593;</li>').appendTo("ul.guessFBack");
-	$('h4.guessFBack').addClass(temp).text(temp+"!, Too Low!");
+	$('h4.guessFBack').addClass(temp).text(temp+"! Too Low!");
     } else if (theirGuess > answer) {
 	$('<li class="'+temp+'">'+theirGuess+'&#8595;</li>').appendTo("ul.guessFBack");
-	$('h4.guessFBack').addClass(temp).text(temp+"!, Too High!");
+	$('h4.guessFBack').addClass(temp).text(temp+"! Too High!");
     } else {
 	//for right answer
 	$('#guessBox').attr('placeholder', 'killer guessing!');
