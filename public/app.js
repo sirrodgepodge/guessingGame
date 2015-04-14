@@ -46,7 +46,6 @@ var guess = function() {
 	$("h4.guessFBack").text("You've lost :(").addClass(temp);
 	$('#guess').text("Play Again!");
 	$('body').css('background', 'red');
-	guessArr = [];
 	return;
     }
 
