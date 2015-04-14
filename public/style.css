@@ -9,6 +9,18 @@
     padding-bottom: 5px;
 }
 
+#guessBox {
+    width: 150px;
+}
+
+#guess {
+    width: 100px;
+}
+
+#hint {
+    width: 50px;
+}
+
 .guessFBack {
     margin-top: 20px;
     margin-left: auto;
