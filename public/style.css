@@ -37,7 +37,7 @@ ul.guessFBack {
 }
 
 .guessFBack li {
-    display: inline-block;
+    text-align: center;
 }
 
 body {
