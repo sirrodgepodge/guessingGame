@@ -56,6 +56,7 @@ var guess = function() {
 	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
 	$('#guess').text("Play Again!");
 	$('body').css('background', 'green');
+	guessRem = 0;
     }
 };
 
@@ -66,7 +67,7 @@ var playAgain = function() {
     $('h4.guessFBack').text("");
     $('#guessBox').attr('placeholder', origPlaceholder);
     $('body').css('background', origBackground);
-    $('#guess').text("Play Again!");
+    $('#guess').text("Guess!");
 };
 
 var main= function(){
