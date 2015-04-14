@@ -20,7 +20,7 @@ var guess = function() {guess:{
     //Check guess type
     if(theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
-	function guess(e){e.stopImmediatePropagation;}
+	function guess(e){e.stopImmediatePropagation();}
 	break guess;
     }
     
@@ -32,7 +32,7 @@ var guess = function() {guess:{
 	$('body').attr('background', 'red');
 	$('#guess').attr('id','playAgain');
 	main();
-	function guess(e){e.stopImmediatePropagation;}
+	function guess(e){e.stopImmediatePropagation();}
 	break guess;
     }
 
