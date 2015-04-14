@@ -54,7 +54,9 @@ var guess = function() {
     //provide temperature first
     if(temp) $('h4.guessFBack').removeClass(temp);
     var temp = Math.abs(theirGuess-answer);
-    if(temp > 40){
+    if(temp === answer){
+	temp = "won"
+    } else if (temp > 40){
 	temp = "Freezing";
     } else if (temp > 25) {
 	temp = "Cold";
@@ -73,7 +75,6 @@ var guess = function() {
     } else {
 	//for right answer
 	$('#guessBox').attr('placeholder', 'killer guessing!');
-	temp = "won";
 	$('h4.guessFBack').addClass(temp).text("You Win!!! :)");
 	$('#guess').text("Play Again!");
 	$('body').css('background', '#00CC00');
