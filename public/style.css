@@ -42,7 +42,8 @@ ul.guessFBack {
 
 body {
     background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0;
-    background-size: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .main {
