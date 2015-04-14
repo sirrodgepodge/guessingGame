@@ -53,7 +53,7 @@ var guess = function() {
     //provide temperature first
     if(temp) $('h4.guessFBack').removeClass(temp);
     var temp = Math.abs(theirGuess-answer);
-    if(temp === answer){
+    if(temp === 0){
 	temp = "won"
     } else if (temp > 40){
 	temp = "Freezing";
