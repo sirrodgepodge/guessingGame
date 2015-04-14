@@ -20,6 +20,7 @@ var guess = function() {guess:{
     //Check guess type
     if(theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
+	function guess(e){e.stopImmediatePropagation;}
 	break guess;
     }
     
@@ -28,9 +29,10 @@ var guess = function() {guess:{
 	$('#guessBox').attr("placeholder", "Work on that guess!");
 	$("h4.guessFBack").text("You've lost :(").css('color','red');
 	$('#guess').text("Play Again!");
-	$('body').attr('background', '#FF0000');
+	$('body').attr('background', 'red');
 	$('#guess').attr('id','playAgain');
 	main();
+	function guess(e){e.stopImmediatePropagation;}
 	break guess;
     }
 
@@ -51,7 +53,7 @@ var guess = function() {guess:{
 	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
 	$('#guess').text("Play Again!");
 	$('#guess').attr('id', 'playAgain');
-	$('body').css('background', '#00CC00');
+	$('body').css('background', 'green');
 	main();
     }
 }};
