@@ -60,6 +60,10 @@ var guess = function() {guess:{
 	$('body').css('background', 'green');
 	main();
     }
+    function guess(e){
+	e.stopImmediatePropagation();
+    }
+    break guess;
 }};
 
 var playAgain = function() {
