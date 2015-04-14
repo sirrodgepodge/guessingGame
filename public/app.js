@@ -49,13 +49,26 @@ var guess = function() {
 	return;
     }
 
-    //Provide guess feedback
-    if (theirGuess < answer) {
-	$('<li class="below">'+theirGuess+'</li>').appendTo("ul.guessFBack");
-	$('h4.guessFBack').css('color', 'blue').text("Too Low!");
+    ////Provide guess feedback
+    //provide temperature first
+    if(temp) $('h4.guessFBack').removeClass(temp);
+    var temp = Math.abs(theirguess-answer));
+    if(temp > 40){
+	temp = "freezing";
+    } else if (temp > 25) {
+	temp = "cold";
+    } else if (temp > 10) {
+	temp = "hot";
+    } else {
+	temp = "roasting";
+    }
+
+    if(theirGuess < answer) {
+	$('<li class="'+temp+'">'+theirGuess+'&#8593;</li>').appendTo("ul.guessFBack");
+	$('h4.guessFBack').addClass(temp).text(temp+"!, Too Low!");
     } else if (theirGuess > answer) {
-	$('<li class="above">'+theirGuess+'</li>').appendTo("ul.guessFBack");
-	$('h4.guessFBack').css('color', 'red').text("Too High!");
+	$('<li class="'+temp+'">'+theirGuess+'&#8595;</li>').appendTo("ul.guessFBack");
+	$('h4.guessFBack').addClass(temp).text(temp+"!, Too High!");
     } else {
 	//for right answer
 	$('#guessBox').attr('placeholder', 'killer guessing!');
