@@ -54,13 +54,13 @@ var guess = function() {
     if(temp) $('h4.guessFBack').removeClass(temp);
     var temp = Math.abs(theirGuess-answer);
     if(temp > 40){
-	temp = "freezing";
+	temp = "Freezing";
     } else if (temp > 25) {
-	temp = "cold";
+	temp = "Cold";
     } else if (temp > 10) {
-	temp = "hot";
+	temp = "Hot";
     } else {
-	temp = "roasting";
+	temp = "Roasting";
     }
 
     if(theirGuess < answer) {

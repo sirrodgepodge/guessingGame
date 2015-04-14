@@ -52,11 +52,18 @@ body {
     padding-bottom:3px;
 }
 
-.above {
+.Roasting {
     color: red;
 }
 
-.below {
+.Freezing {
     color: blue;
 }
 
+.Cold {
+    color: darkblue;
+}
+
+.Hot {
+    color: darkred;
+}
