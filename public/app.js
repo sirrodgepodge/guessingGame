@@ -13,14 +13,14 @@ var hint = function(){
 };
 
 var guessRem = 5;
-var guess = function() {
+var guess = function() {guess:{
     var theirGuess = parseInt($('#guessBox').val());
     $('#guessBox').val("");
     
     //Check guess type
     if(theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
-	break;
+	break guess;
     }
     
     //Create guess list if first, end game if guess number 5 and wrong
@@ -31,7 +31,7 @@ var guess = function() {
 	$('body').attr('background', '#FF0000');
 	$('#guess').attr('id','playAgain');
 	main();
-	break;
+	break guess;
     }
 
     //Increment guess number
@@ -54,7 +54,7 @@ var guess = function() {
 	$('body').css('background', '#00CC00');
 	main();
     }
-};
+}};
 
 var playAgain = function() {
     answer = Math.ceil(Math.random()*100);
