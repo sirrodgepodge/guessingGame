@@ -13,14 +13,20 @@ var hint = function(){
 };
 
 var guessRem = 5;
+var guessArr = [];
 var guess = function() {
     var theirGuess = parseInt($('#guessBox').val());
     $('#guessBox').val("");
     
     //Check guess type
-    if(theirGuess.toString() === 'NaN' && guessRem > 0 || theirGuess > 100 || theirGuess < 1) {
+    if((theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) && guessRem > 0) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
 	return;
+    } else if (guessArr.indexOf(theirGuess)===-1){
+	$('#guessBox').attr("placeholder", "Already guessed!");
+	return;
+    } else {
+	guessArr.push(theirGuess);
     }
 
     //Increment guess number
@@ -39,6 +45,7 @@ var guess = function() {
 	$("h4.guessFBack").text("You've lost :(").css('color','red');
 	$('#guess').text("Play Again!");
 	$('body').css('background', 'red');
+	guessArr = [];
 	return;
     }
 
