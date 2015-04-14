@@ -85,6 +85,7 @@ var guess = function() {
 var playAgain = function() {
     answer = Math.ceil(Math.random()*100);
     guessRem = 5;
+    guessArr = [];
     $('.guessFBack li').remove();
     $('h4.guessFBack').text("");
     $('#guessBox').attr('placeholder', origPlaceholder);
