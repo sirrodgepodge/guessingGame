@@ -14,6 +14,7 @@ var hint = function(){
 
 var guessRem = 5;
 var guessArr = [];
+var temp;
 var guess = function() {
     var theirGuess = parseInt($('#guessBox').val());
     $('#guessBox').val("");
@@ -52,7 +53,7 @@ var guess = function() {
     ////Provide guess feedback
     //provide temperature first
     if(temp) $('h4.guessFBack').removeClass(temp);
-    var temp = Math.abs(theirGuess-answer);
+    temp = Math.abs(theirGuess-answer);
     if(temp === 0){
 	temp = "won"
     } else if (temp > 40){
