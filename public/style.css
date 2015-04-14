@@ -10,12 +10,13 @@
 }
 
 .guessFBack {
-    padding-top: 20px;
+    margin-top: 20px;
     border: 1px #000000;
     background: #FFFFFF;
     border-radius: 3px;
     vertical-align: middle;
     width: 150px;
+    display: none;
 }
 
 ul.guessFBack {
