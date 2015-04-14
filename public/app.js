@@ -39,7 +39,6 @@ var guess = function() {
 	$("h4.guessFBack").text("You've lost :(").css('color','red');
 	$('#guess').text("Play Again!");
 	$('body').css('background', 'red');
-	$('#guess').attr('id','playAgain');
 	return;
     }
 
