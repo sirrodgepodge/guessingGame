@@ -36,6 +36,10 @@ ul.guessFBack {
     list-style-type: none;
 }
 
+.guessFBack li {
+    display: inline-block;
+}
+
 body {
     background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') 0 /cover;
 }
