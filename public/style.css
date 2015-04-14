@@ -53,6 +53,7 @@ body {
 
 .row {
     padding-bottom: 3px;
+    margin-right: 0px;
 }
 
 .Roasting {
@@ -73,8 +74,4 @@ body {
 
 .won {
     color: green;
-}
-
-.row {
-    margin-right: 0px;
 }
