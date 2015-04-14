@@ -22,7 +22,7 @@ var guess = function() {guess:{
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
 	function guess(e){
 	    e.stopImmediatePropagation();
-	}
+	}();
 	break guess;
     }
     
@@ -36,7 +36,7 @@ var guess = function() {guess:{
 	main();
 	function guess(e){
 	    e.stopImmediatePropagation();
-	}
+	}();
 	break guess;
     }
 
@@ -62,7 +62,7 @@ var guess = function() {guess:{
     }
     function guess(e){
 	e.stopImmediatePropagation();
-    }
+    }();
     break guess;
 }};
 
