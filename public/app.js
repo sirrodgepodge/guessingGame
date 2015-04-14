@@ -22,7 +22,7 @@ var guess = function() {
     if((theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) && guessRem > 0) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
 	return;
-    } else if (guessArr.indexOf(theirGuess)===-1){
+    } else if (guessArr.indexOf(theirGuess)!==-1){
 	$('#guessBox').attr("placeholder", "Already guessed!");
 	return;
     } else {
