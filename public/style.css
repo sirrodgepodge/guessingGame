@@ -11,6 +11,7 @@
 
 #guessBox {
     width: 254px;
+    border-radius: 4 px;
 }
 
 #guess {
@@ -28,8 +29,12 @@
     text-align: center;
     border: 1px #000000;
     background: #FFFFFF;
-    border-radius: 3px;
+    border-radius: 4px;
     width: 200px;
+}
+
+button {
+    border-radius: 2px;
 }
 
 ul.guessFBack {
@@ -41,16 +46,16 @@ ul.guessFBack {
 }
 
 body {
-    background:url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') no-repeat center center fixed;
+    background: url('http://www.adweek.com/socialtimes/files/2013/07/QuestionMarksClouds.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
 .main {
-    padding-top:8px;
+    padding-top: 8px;
 }
 
 .row {
-    padding-bottom:3px;
+    padding-bottom: 3px;
 }
 
 .Roasting {
