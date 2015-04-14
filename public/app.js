@@ -13,36 +13,35 @@ var hint = function(){
 };
 
 var guessRem = 5;
-var guess = function() {guess:{
+var guess = function() {
     var theirGuess = parseInt($('#guessBox').val());
     $('#guessBox').val("");
     
     //Check guess type
-    if(theirGuess.toString() === 'NaN' || theirGuess > 100 || theirGuess < 1) {
+    if(theirGuess.toString() === 'NaN' && guessRem > 0 || theirGuess > 100 || theirGuess < 1) {
 	$('#guessBox').attr("placeholder", "Number 1-100 Please!");
-	function guess(e){
-	    e.stopImmediatePropagation();
-	}();
-	break guess;
-    }
-    
-    //Create guess list if first, end game if guess number 5 and wrong
-    if (theirGuess !== answer && guessRem === 1) {
-	$('#guessBox').attr("placeholder", "Work on that guess!");
-	$("h4.guessFBack").text("You've lost :(").css('color','red');
-	$('#guess').text("Play Again!");
-	$('body').attr('background', 'red');
-	$('#guess').attr('id','playAgain');
-	main();
-	function guess(e){
-	    e.stopImmediatePropagation();
-	}();
-	break guess;
+	return;
     }
 
     //Increment guess number
     guessRem -= 1;
     $('#guessBox').attr("placeholder", guessRem + " guesses left!");
+
+    //clicking "play again"
+    if(guessRem === -1) {
+	playAgain();
+	return;
+    }
+
+    //Create guess list if first, end game if guess number 5 and wrong
+    if (theirGuess !== answer && guessRem === 0) {
+	$('#guessBox').attr("placeholder", "Work on that guess!");
+	$("h4.guessFBack").text("You've lost :(").css('color','red');
+	$('#guess').text("Play Again!");
+	$('body').attr('background', 'red');
+	$('#guess').attr('id','playAgain');
+	return;
+    }
 
     //Provide guess feedback
     if (theirGuess < answer) {
@@ -56,14 +55,8 @@ var guess = function() {guess:{
 	$('#guessBox').attr('placeholder', 'killer guessing!');
 	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
 	$('#guess').text("Play Again!");
-	$('#guess').attr('id', 'playAgain');
 	$('body').css('background', 'green');
-	main();
     }
-    function guess(e){
-	e.stopImmediatePropagation();
-    }();
-    break guess;
 }};
 
 var playAgain = function() {
@@ -73,8 +66,7 @@ var playAgain = function() {
     $('h4.guessFBack').text("");
     $('#guessBox').attr('placeholder', origPlaceholder);
     $('body').css('background', origBackground);
-    $('#playAgain').text("Guess!").attr('id','guess');
-    main();
+    $('#guess').text("Play Again!");
 };
 
 var main= function(){
