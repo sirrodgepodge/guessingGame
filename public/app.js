@@ -42,7 +42,8 @@ var guess = function() {
     //Create guess list if first, end game if guess number 5 and wrong
     if (theirGuess !== answer && guessRem === 0) {
 	$('#guessBox').attr("placeholder", "Work on that guess!");
-	$("h4.guessFBack").text("You've lost :(").css('color','red');
+	temp = "Roasting";
+	$("h4.guessFBack").text("You've lost :(").addClass(temp);
 	$('#guess').text("Play Again!");
 	$('body').css('background', 'red');
 	guessArr = [];
@@ -72,7 +73,8 @@ var guess = function() {
     } else {
 	//for right answer
 	$('#guessBox').attr('placeholder', 'killer guessing!');
-	$('h4.guessFBack').css('color', 'green').text("You Win!!! :)");
+	temp = "won";
+	$('h4.guessFBack').addClass(temp).text("You Win!!! :)");
 	$('#guess').text("Play Again!");
 	$('body').css('background', '#00CC00');
 	guessRem = 0;
